@@ -1,0 +1,15 @@
+<apex:page controller="Opp_Test">
+    <apex:form >
+        <apex:pageBlock title="Opportunity Info" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="limit10" action="{!limit10}" reRender="pb"/>
+                <apex:commandButton value="limitoff10" action="{!limitoff10}" reRender="pb"/>
+                <apex:commandButton value="limitoff5" action="{!limitoff5}" reRender="pb"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!opp}" var="a">
+                <apex:column value="{!a.Id}"/>
+                <apex:column value="{!a.Name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,17 @@
+<apex:page controller="Account_Test">
+    <apex:form >
+        <apex:pageBlock title="ContactInfo" id="pb">
+            <apex:pageBlockButtons location="top">
+                <apex:commandButton value="B1" action="{!limit5}"  reRender="pb"/>
+                <apex:commandButton value="B2" action="{!limit10}" reRender="pb"/>
+                <apex:commandButton value="BO1" action="{!offset5}"  reRender="pb"/>
+                <apex:commandButton value="BO2" action="{!offset2}" reRender="pb"/>
+                <apex:commandButton value="BO-2" action="{!offsetlimit}"  reRender="pb"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockTable value="{!acc}" var="a">
+                <apex:column value="{!a.Name}"/>
+                <apex:column value="{!a.Industry}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

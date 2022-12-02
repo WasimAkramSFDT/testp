@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Calculator" icon-name="standard:case">
+        <lightning-input label="Enter num1" value={number1} name="num1" onchange={changeHandler}></lightning-input>
+        <lightning-input label="Enter num2" value={number2} name="num2" onchange={changeHandler}></lightning-input>
+        <lightning-button-group>
+            <lightning-button label="Add" onclick={addme}> </lightning-button>
+            <lightning-button label="Sub" onclick={subme}> </lightning-button>
+            <lightning-button label="Mul" onclick={mulme}> </lightning-button>
+            <lightning-button label="Div" onclick={divme}> </lightning-button>
+        </lightning-button-group>
+    </lightning-card>
+</template>

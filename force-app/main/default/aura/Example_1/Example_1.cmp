@@ -1,0 +1,19 @@
+<aura:component controller="SSC_23">
+    <aura:attribute name="acct" type="Account[]" />
+    <aura:attribute name="txt" type="String" />
+    <lightning:card title="Account Info">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="6">
+                <lightning:input label="Please search here..." value="{!v.txt}" />
+                <lightning:button label="ClickMe" onclick="{!c.callMe}" />
+            </lightning:layoutItem >
+            <lightning:layoutItem size="6">
+                <aura:iteration items="{acct}" var="a" >
+                    {!a.Name} <br></br>
+                    {!a.Phone}<br></br>
+                    {!a.Industry}<br></br>
+                </aura:iteration>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,6 @@
+<apex:page controller="Test_Cl_1">
+    <apex:form >
+        <apex:selectOption >
+        </apex:selectOption>
+    </apex:form>
+</apex:page>

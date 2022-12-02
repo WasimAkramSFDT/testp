@@ -1,0 +1,10 @@
+<aura:component controller="AuraTest">
+    <aura:attribute type="Decimal" name="intrest" />
+    <lightning:card title="Intrest Calculator">
+        <lightning:input type="number" aura:id="amt"  label="Enter Amount"/>
+        <lightning:input type="number" aura:id="rate" label="Enter Rate"/>
+        <lightning:input type="number" aura:id="year" label="Enter Year"/>
+        <lightning:button label="Calculate" onclick="{!c.calculateMe}"/>
+        Result : {!v.intrest}
+    </lightning:card>
+</aura:component>
